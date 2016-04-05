@@ -1,0 +1,91 @@
+/**
+ * 
+ */
+package edu.towson.cis.cosc603.project4.vendingmachine;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+ * @author Owner
+ *
+ */
+public class VendingMachineItemTest {
+	
+	VendingMachineItem doritos, zeroDollars, lessThanZeroDollars, negativePrice, nullName;
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+		doritos = new VendingMachineItem("Doritos", 1.75);
+	}
+	
+	/**
+	 * Test method for {@link edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItem#VendingMachineItem(java.lang.String, double)}.
+	 */
+	@Test
+	public void testVendingMachineItem() {
+		assertNotNull(doritos);
+	}
+	
+	/**
+	 * Test method for {@link edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItem#VendingMachineItem(java.lang.String, double)}.
+	 */
+	@Test(expected=VendingMachineException.class)
+	public void testLessThanZeroDollars() {
+		lessThanZeroDollars = new VendingMachineItem("lessThanZeroDollars", .001);
+	}
+	
+	/**
+	 * Test method for {@link edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItem#VendingMachineItem(java.lang.String, double)}.
+	 */
+	@Test(expected=VendingMachineException.class)
+	public void testNegativePrice() {
+		negativePrice = new VendingMachineItem("negativePrice", -1.09);
+	}
+
+	/**
+	 * Test method for {@link edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItem#getName()}.
+	 */
+	@Test
+	public void testGetName() {
+		assertEquals("Doritos", doritos.getName());
+	}
+	
+	/**
+	 * Test method for {@link edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItem#getName()}.
+	 */
+	@Test
+	public void testNullName() {
+		nullName = new VendingMachineItem(null, 1.00);
+		assertEquals(null, nullName.getName());
+	}
+
+
+	/**
+	 * Test method for {@link edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItem#getPrice()}.
+	 */
+	@Test
+	public void testGetPrice() {
+		assertEquals(1.75, doritos.getPrice(), 0.00);
+	}
+
+	/**
+	 * Cleans up test objects after a test case is executed.
+	 * @throws java.lang.Exception
+	 */
+	@After
+	public void tearDown() throws Exception {
+		doritos = null;
+		zeroDollars = null;
+		lessThanZeroDollars = null;
+		negativePrice = null;
+		nullName = null;
+	}
+
+}

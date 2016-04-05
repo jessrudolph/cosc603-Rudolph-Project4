@@ -15,7 +15,7 @@ import org.junit.Test;
  */
 public class VendingMachineItemTest {
 	
-	VendingMachineItem doritos, zeroDollars, lessThanZeroDollars, negativePrice, nullName;
+	VendingMachineItem doritos, negativePrice, nullName;
 
 	/**
 	 * @throws java.lang.Exception
@@ -25,22 +25,6 @@ public class VendingMachineItemTest {
 		doritos = new VendingMachineItem("Doritos", 1.75);
 	}
 	
-	public void testZeroDollars() {
-		zeroDollars = new VendingMachineItem("zeroDollars", 0.00);
-		assertNull(zeroDollars);		
-	}
-
-	public void testLessThanZeroDollars() {
-		lessThanZeroDollars = new VendingMachineItem("lessThanZeroDollars", .001);
-		assertNull(lessThanZeroDollars);
-	}
-	
-	public void testNegativePrice() {
-		negativePrice = new VendingMachineItem("negativePrice", -1.09);
-		assertEquals(-1.09, negativePrice.getPrice(), 0.00);
-		assertNull(negativePrice);
-	}
-	
 	/**
 	 * Test method for {@link edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItem#VendingMachineItem(java.lang.String, double)}.
 	 */
@@ -48,7 +32,14 @@ public class VendingMachineItemTest {
 	public void testVendingMachineItem() {
 		assertNotNull(doritos);
 	}
+	
 
+	@Test(expected=VendingMachineException.class)
+	public void testNegativePrice() {
+		negativePrice = new VendingMachineItem("negativePrice", -1.09);
+	}
+
+	
 	/**
 	 * Test method for {@link edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItem#getName()}.
 	 */
@@ -82,8 +73,6 @@ public class VendingMachineItemTest {
 	@After
 	public void tearDown() throws Exception {
 		doritos = null;
-		zeroDollars = null;
-		lessThanZeroDollars = null;
 		negativePrice = null;
 		nullName = null;
 	}
