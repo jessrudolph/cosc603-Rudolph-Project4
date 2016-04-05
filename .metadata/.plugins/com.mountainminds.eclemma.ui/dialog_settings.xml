@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SessionExportWizard">
+		<item value="HTML" key="SessionExportPage1.format"/>
+		<list key="SessionExportPage1.destinations">
+			<item value="C:\Users\Owner\Documents\Programming\COSC 603\Homework and Projects\Project 4\Project 4\VendingMachine\Test Reports"/>
+		</list>
+	</section>
+</section>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="VendingMachineItemTest" project="VendingMachine" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.0">
-    <testcase name="testVendingMachineItem" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.0"/>
-    <testcase name="testGetPrice" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.0"/>
-    <testcase name="testNullName" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.0"/>
-    <testcase name="testGetName" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.0"/>
-  </testsuite>
-</testrun>
