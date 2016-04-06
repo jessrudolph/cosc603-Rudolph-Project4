@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>VendingMachine.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">edu.towson.cis.cosc603.project4.vendingmachine (Apr 5, 2016 6:25:20 PM)</a> &gt; <a href="../../index.html" class="el_group">VendingMachine2</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">edu.towson.cis.cosc603.project4.vendingmachine</a> &gt; <span class="el_source">VendingMachine.java</span></div><h1>VendingMachine.java</h1><pre class="source lang-java linenums">package edu.towson.cis.cosc603.project4.vendingmachine;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>VendingMachine.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">edu.towson.cis.cosc603.project4.vendingmachine (Apr 5, 2016 9:15:30 PM)</a> &gt; <a href="../../index.html" class="el_group">VendingMachine2</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">edu.towson.cis.cosc603.project4.vendingmachine</a> &gt; <span class="el_source">VendingMachine.java</span></div><h1>VendingMachine.java</h1><pre class="source lang-java linenums">package edu.towson.cis.cosc603.project4.vendingmachine;
 
 
 /**
@@ -74,12 +74,12 @@ public class VendingMachine {
 	private int getSlotIndex(String code) throws VendingMachineException {
 <span class="fc bfc" id="L75" title="All 2 branches covered.">		if( code.equals(A_CODE)) {</span>
 <span class="fc" id="L76">			return 0;</span>
-<span class="pc bpc" id="L77" title="1 of 2 branches missed.">		} else if ( code.equals(B_CODE)) {</span>
-<span class="nc" id="L78">			return 1;</span>
-<span class="pc bpc" id="L79" title="1 of 2 branches missed.">		} else if ( code.equals(C_CODE)) {</span>
-<span class="nc" id="L80">			return 2;</span>
-<span class="pc bpc" id="L81" title="1 of 2 branches missed.">		} else if ( code.equals(D_CODE)) {</span>
-<span class="nc" id="L82">			return 3;</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">		} else if ( code.equals(B_CODE)) {</span>
+<span class="fc" id="L78">			return 1;</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">		} else if ( code.equals(C_CODE)) {</span>
+<span class="fc" id="L80">			return 2;</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">		} else if ( code.equals(D_CODE)) {</span>
+<span class="fc" id="L82">			return 3;</span>
 		} else {
 <span class="fc" id="L84">			throw new VendingMachineException(VendingMachine.INVALID_CODE_MESSAGE);</span>
 		}
@@ -101,9 +101,9 @@ public class VendingMachine {
 	public void addItem(VendingMachineItem item, String code)
 			throws VendingMachineException {
 <span class="fc" id="L103">		int slotIndex = getSlotIndex(code);</span>
-<span class="pc bpc" id="L104" title="1 of 2 branches missed.">		if (itemArray[slotIndex] != null) {</span>
-<span class="nc" id="L105">			throw new VendingMachineException(SLOT_MESSAGE + code</span>
-<span class="nc" id="L106">					+ ALREADY_OCCUPIED_MESSAGE);</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">		if (itemArray[slotIndex] != null) {</span>
+<span class="fc" id="L105">			throw new VendingMachineException(SLOT_MESSAGE + code</span>
+<span class="fc" id="L106">					+ ALREADY_OCCUPIED_MESSAGE);</span>
 		} else {
 <span class="fc" id="L108">			itemArray[slotIndex] = item;</span>
 		}
@@ -131,10 +131,10 @@ public class VendingMachine {
 <span class="fc" id="L131">		int slotIndex = getSlotIndex(code);</span>
 <span class="fc" id="L132">		VendingMachineItem item = itemArray[slotIndex];</span>
 <span class="fc" id="L133">		itemArray[slotIndex] = null;</span>
-<span class="pc bpc" id="L134" title="1 of 2 branches missed.">		if ( item == null) {</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">		if ( item == null) {</span>
 <span class="fc" id="L135">			throw new VendingMachineException(SLOT_MESSAGE + code + IS_EMPTY_MESSAGE);</span>
 		}
-<span class="nc" id="L137">		return item;</span>
+<span class="fc" id="L137">		return item;</span>
 	}
 
 	/**
@@ -172,13 +172,14 @@ public class VendingMachine {
 	public boolean makePurchase(String code) {
 <span class="fc" id="L173">		boolean returnCode = false;</span>
 <span class="fc" id="L174">		VendingMachineItem item = getItem(code);</span>
-<span class="pc bpc" id="L175" title="3 of 4 branches missed.">		if(( item != null ) &amp;&amp; ( this.balance &gt;= item.getPrice() )) {</span>
-<span class="nc" id="L176">			removeItem(code);</span>
-<span class="nc" id="L177">			this.balance -= item.getPrice();</span>
-<span class="nc" id="L178">			returnCode = true;</span>
+<span class="pc bpc" id="L175" title="1 of 4 branches missed.">		if(( item != null ) &amp;&amp; ( this.balance &gt;= item.getPrice() )) {</span>
+<span class="fc" id="L176">			removeItem(code);</span>
+<span class="fc" id="L177">			this.balance -= item.getPrice();</span>
+<span class="fc" id="L178">			returnCode = true;</span>
 		}
 <span class="fc" id="L180">		return returnCode;</span>
 	}
+
 
 	/**
 	 * Returns the amount of change in the machine and sets the balance to 0.
@@ -187,9 +188,9 @@ public class VendingMachine {
 	 * @return The amount of change in the machine
 	 */
 	public double returnChange() {
-<span class="fc" id="L190">		double change = this.balance;</span>
-<span class="fc" id="L191">		this.balance = 0;</span>
-<span class="fc" id="L192">		return change;</span>
+<span class="fc" id="L191">		double change = this.balance;</span>
+<span class="fc" id="L192">		this.balance = 0;</span>
+<span class="fc" id="L193">		return change;</span>
 	}
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>edu.towson.cis.cosc603.project4.vendingmachine (Apr 5, 2016 6:25:20 PM)</div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>edu.towson.cis.cosc603.project4.vendingmachine (Apr 5, 2016 9:15:30 PM)</div></body></html>
