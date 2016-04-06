@@ -17,6 +17,7 @@ org.eclipse.jdt.ui.text.templates_migrated=true
 org.eclipse.jface.textfont=1|Courier New|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
 proposalOrderMigrated=true
 spelling_locale_initialized=true
+spelling_user_dictionary=C\:\\Users\\Owner\\eclipse\\java-mars\\eclipse\\configuration\\org.eclipse.osgi\\540\\0\\.cp\\nl\\en\\spelling.dictionary
 tabWidthPropagated=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true
