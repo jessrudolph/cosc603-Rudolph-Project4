@@ -180,6 +180,7 @@ public class VendingMachine {
 		return returnCode;
 	}
 
+
 	/**
 	 * Returns the amount of change in the machine and sets the balance to 0.
 	 * Precondition: balance >= 0

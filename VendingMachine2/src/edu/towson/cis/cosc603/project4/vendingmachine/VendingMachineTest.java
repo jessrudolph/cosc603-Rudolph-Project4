@@ -11,6 +11,11 @@ import static org.junit.Assert.*;
  * @version $Revision: 1.0 $
  */
 public class VendingMachineTest {
+	
+	VendingMachine thisVendingMachine = new VendingMachine();
+	
+	VendingMachineItem newItem;
+
 	/**
 	 * Run the VendingMachine() constructor test.
 	 *
@@ -82,7 +87,7 @@ public class VendingMachineTest {
 		VendingMachine fixture = new VendingMachine();
 		fixture.balance = 1.0;
 		VendingMachineItem item = new VendingMachineItem("", 1.0);
-		String code = "A";
+		String code = "B";
 
 		fixture.addItem(item, code);
 
@@ -106,7 +111,43 @@ public class VendingMachineTest {
 
 		fixture.addItem(item, code);
 
-		// add additional test code here
+	}
+	
+	/**
+	 * Run the void addItem(VendingMachineItem,String) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 4/5/16 6:19 PM
+	 */
+	@Test(expected = edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineException.class)
+	public void testAddItem_4()
+		throws Exception {
+		newItem = new VendingMachineItem("New Item Name", 2.00);
+		thisVendingMachine.addItem(newItem, "D");
+
+		
+		thisVendingMachine.balance = 1.0;
+		VendingMachineItem item = new VendingMachineItem("", 1.0);
+		String code = "D";
+
+		thisVendingMachine.addItem(item, code);
+
+	}
+	
+	/**
+	 * Run the void addItem(VendingMachineItem,String) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 4/5/16 6:19 PM
+	 */
+	@Test
+	public void testAddItem_5()
+		throws Exception {
+		newItem = new VendingMachineItem("New Item Name", 2.00);
+		thisVendingMachine.addItem(newItem, "C");
+
 	}
 
 	/**
@@ -162,10 +203,8 @@ public class VendingMachineTest {
 		fixture.balance = 1.0;
 		String code = "";
 
-		VendingMachineItem result = fixture.getItem(code);
+		fixture.getItem(code);
 
-		// add additional test code here
-		assertNotNull(result);
 	}
 
 	/**
@@ -280,11 +319,32 @@ public class VendingMachineTest {
 		fixture.balance = 1.0;
 		String code = "";
 
-		boolean result = fixture.makePurchase(code);
+		fixture.makePurchase(code);
 
-		// add additional test code here
-		assertTrue(result);
 	}
+	
+	
+	/**
+	 * Run the boolean makePurchase(String) method test.
+	 *
+	 * @throws Exception
+	 *
+	 * @generatedBy CodePro at 4/5/16 6:19 PM
+	 */
+	@Test
+	public void testMakePurchase_5()
+		throws Exception {
+		newItem = new VendingMachineItem("New Item Name", 1.75);
+		thisVendingMachine.addItem(newItem, "A");
+		thisVendingMachine.insertMoney(10.00);
+
+
+		assertTrue(thisVendingMachine.makePurchase("A"));	
+
+	}
+	
+	
+	
 
 	/**
 	 * Run the VendingMachineItem removeItem(String) method test.
@@ -299,11 +359,8 @@ public class VendingMachineTest {
 		VendingMachine fixture = new VendingMachine();
 		fixture.balance = 1.0;
 		String code = "";
-
-		VendingMachineItem result = fixture.removeItem(code);
-
-		// add additional test code here
-		assertNotNull(result);
+		
+		fixture.removeItem(code);
 	}
 
 	/**
@@ -393,14 +450,5 @@ public class VendingMachineTest {
 		// Add additional tear down code here
 	}
 
-	/**
-	 * Launch the test.
-	 *
-	 * @param args the command line arguments
-	 *
-	 * @generatedBy CodePro at 4/5/16 6:19 PM
-	 */
-	public static void main(String[] args) {
-		new org.junit.runner.JUnitCore().run(VendingMachineTest.class);
-	}
+
 }

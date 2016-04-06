@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="VendingMachine2" project="VendingMachine2" tests="24" started="24" failures="0" errors="1" ignored="0">
+  <testsuite name="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.019">
+    <testcase name="testInsertMoney_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0"/>
+    <testcase name="testInsertMoney_2" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0"/>
+    <testcase name="testMakePurchase_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0"/>
+    <testcase name="testMakePurchase_2" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0"/>
+    <testcase name="testMakePurchase_3" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0"/>
+    <testcase name="testMakePurchase_4" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0">
+      <error>edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineException: Invalid code for vending machine item&#13;
+	at edu.towson.cis.cosc603.project4.vendingmachine.VendingMachine.getSlotIndex(VendingMachine.java:84)&#13;
+	at edu.towson.cis.cosc603.project4.vendingmachine.VendingMachine.getItem(VendingMachine.java:119)&#13;
+	at edu.towson.cis.cosc603.project4.vendingmachine.VendingMachine.makePurchase(VendingMachine.java:174)&#13;
+	at edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest.testMakePurchase_4(VendingMachineTest.java:280)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#13;
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testReturnChange_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0"/>
+    <testcase name="testVendingMachine_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.002"/>
+    <testcase name="testVendingMachine_2" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0"/>
+    <testcase name="testRemoveItem_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.001"/>
+    <testcase name="testRemoveItem_2" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.001"/>
+    <testcase name="testRemoveItem_3" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0"/>
+    <testcase name="testAddItem_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.001"/>
+    <testcase name="testAddItem_2" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.0"/>
+    <testcase name="testAddItem_3" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.003"/>
+    <testcase name="testGetItem_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.005"/>
+    <testcase name="testGetItem_2" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.001"/>
+    <testcase name="testGetBalance_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineTest" time="0.004"/>
+  </testsuite>
+  <testsuite name="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineExceptionTest" time="0.005">
+    <testcase name="testVendingMachineException_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineExceptionTest" time="0.001"/>
+    <testcase name="testVendingMachineException_2" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineExceptionTest" time="0.004"/>
+  </testsuite>
+  <testsuite name="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.007">
+    <testcase name="testVendingMachineItem_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.003"/>
+    <testcase name="testVendingMachineItem_2" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.001"/>
+    <testcase name="testGetPrice_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.003"/>
+    <testcase name="testGetName_1" classname="edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineItemTest" time="0.0"/>
+  </testsuite>
+</testrun>
